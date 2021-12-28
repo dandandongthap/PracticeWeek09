@@ -5,8 +5,7 @@
 #include <string>
 #include <fstream>
 
-class Graph
-{
+class Graph {
 public:
 	Graph();
 	Graph(const std::string& filename);
@@ -16,7 +15,7 @@ public:
 	void display() const;
 	bool is_undirected_graph() const;
 	int count_edges() const;
-	std::vector<std::pair<int,int>> count_in_out_degrees() const;
+	std::vector<std::pair<int, int>> count_in_out_degrees() const;
 	std::vector<int> dfs(int start_vertex) const;
 	std::vector<int> bfs(int start_vertex) const;
 	bool has_cycle() const;
@@ -33,7 +32,7 @@ private:
 	int vertices;	//number of vertices;
 	std::vector<std::vector<std::pair<int, int>>> adj_list;	//adjacency list
 
-	void dfs(int start_vertex, std::vector<bool>& visited,std::vector<int>& path) const;
+	void dfs(int start_vertex, std::vector<bool>& visited, std::vector<int>& path) const;
 	bool has_cycle(int start_vertex, std::vector<bool>& visited, std::vector<bool>& stack) const;
 	void add_edge(int, int);
 };

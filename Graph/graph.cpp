@@ -4,8 +4,7 @@
 #include <queue>
 #include <tuple>
 
-class DSU	//simple
-{
+class DSU {
 	std::vector<int> parent;
 public:
 	DSU(int n) { parent.assign(n, -1); }
